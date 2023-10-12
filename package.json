@@ -1,0 +1,16 @@
+{
+  "name": "@atomicdesign/atomic-genesis",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "author": {
+    "name": "Brandon Erb",
+    "email": "brandom.m.erb@gmail.com"
+  },
+  "dependencies": {
+    "nx": "15.7.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.2"
+  }
+}
