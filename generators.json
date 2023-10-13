@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "name": "@atomicdesign/atomic-genesis",
+  "version": "0.0.1",
+  "generators": {
+    "atomic-project": {
+      "factory": "./src/generators/atomic-project/generator",
+      "schema": "./src/generators/atomic-project/schema.json",
+      "description": "Generate an Atomic Singularity compatible project. This is a default TypeScript project with reasonable default configurations"
+    }
+  }
+}

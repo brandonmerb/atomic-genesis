@@ -1,0 +1,9 @@
+{
+  "$schema": "https://unpkg.com/nx@15.7.0/schemas/project-schema.json",
+  "name": "@atomicdesign/atomic-genesis",
+  "sourceRoot": "./src",
+  "projectType": "library",
+  "targets": {
+  },
+  "tags": []
+}

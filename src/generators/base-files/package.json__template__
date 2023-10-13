@@ -1,14 +1,14 @@
 {
-  "name": "@atomicdesign/atomic-genesis",
+  "name": "<%= projectName %>",
   "version": "1.0.0",
   "description": "",
   "private": true,
   "author": {
-    "name": "Brandon Erb",
-    "email": "brandom.m.erb@gmail.com"
+    "name": "<%= authorName %>",
+    "email": "<%= authorEmail %>"
   },
   "dependencies": {
-    "nx": "15.7.0"
+    "@atomicdesign/atomic-singularity": "latest"
   },
   "scripts": {
     "clean": "rimraf ./dist",
@@ -18,7 +18,6 @@
     "build:full": "tsc && tsc-alias"
   },
   "devDependencies": {
-    "@nrwl/devkit": "^16.10.0",
     "@swc/cli": "^0.1.62",
     "@swc/core": "^1.3.92",
     "rimraf": "^5.0.5",
@@ -30,6 +29,5 @@
     "dist/**/*.ts",
     "dist/**/*.d.ts",
     "dist/**/*.js"
-  ],
-  "generators": "./generators.json"
+  ]
 }
