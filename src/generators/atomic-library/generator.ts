@@ -25,7 +25,7 @@ function normalizeOptions(tree: Tree, options: AtomicProjectGeneratorSchema): No
   }
   let projectName = !!organizationName ? options.name.split('/')[1] : name;
   projectName = projectName.replace(new RegExp('/', 'g'), '-');
-  const projectRoot = !!organizationName ? `${getWorkspaceLayout(tree).appsDir}/${organizationName}/${projectName}` : `${getWorkspaceLayout(tree).libsDir}/${projectName}`;
+  const projectRoot = !!organizationName ? `${getWorkspaceLayout(tree).libsDir}/${organizationName}/${projectName}` : `${getWorkspaceLayout(tree).libsDir}/${projectName}`;
   const parsedTags = options.tags
     ? options.tags.split(',').map((s) => s.trim())
     : [];
