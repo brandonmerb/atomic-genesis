@@ -8,7 +8,7 @@
     "email": "<%= authorEmail %>"
   },
   "dependencies": {
-    "@atomicdesign/atomic-singularity": "latest"
+    "@atomicdesign/atomic-singularity": "1.0.0"
   },
   "scripts": {
     "clean": "rimraf ./dist",
