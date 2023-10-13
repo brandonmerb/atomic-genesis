@@ -64,7 +64,7 @@ export default async function (tree: Tree, options: AtomicProjectGeneratorSchema
     normalizedOptions.name,
     {
       root: normalizedOptions.projectRoot,
-      projectType: 'application',
+      projectType: 'library',
       sourceRoot: `${normalizedOptions.projectRoot}/src`,
       targets: {
       },

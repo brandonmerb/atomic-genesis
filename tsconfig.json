@@ -8,6 +8,9 @@
     // We want to emit declaration files
     "declaration": true,
 
+    // Need to be able to import JSON files since we store our schema there
+    "resolveJsonModule": true,
+
     // Set to true per SWC's recommendation
     // See: https://swc.rs/docs/migrating-from-tsc
     "useDefineForClassFields": true,
@@ -36,9 +39,6 @@
 
     // Path definitions to make imports cleaner and less relative
     "paths": {
-      "@/*": [
-        "src/*"
-      ]
     },
 
     // The below options are mostly for code base lint-y things
@@ -59,6 +59,8 @@
   // Potentially unnecessary
   // The files we want to include all start in the ./src directory
   "include": [
-    "src",
-  ],
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.json",
+  ]
 }

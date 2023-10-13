@@ -1,14 +1,14 @@
 {
   "$schema": "http://json-schema.org/schema",
   "cli": "nx",
-  "$id": "atomicdesign-atomic-project",
-  "title": "Atomic Project",
+  "$id": "atomicdesign-atomic-library",
+  "title": "Atomic Library",
   "type": "object",
   "properties": {
     "name": {
       "type": "string",
-      "description": "The Project Name to use",
-      "x-prompt": "What project name would you like to use? You may include an organization if desired (@orgname/projectname)",
+      "description": "The Library Name to use",
+      "x-prompt": "What library name would you like to use? You may include an organization if desired (@orgname/libraryname)",
       "$default": {
         "$source": "argv",
         "index": 0
