@@ -1,0 +1,5 @@
+import { type AtomicModuleInterface, createModule } from '@atomicdesign/atomic-singularity'
+
+export <%= projectName %>Module: AtomicModuleInterface = createModule({
+  name: "<%= projectName %>"
+})

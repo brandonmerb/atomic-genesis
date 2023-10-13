@@ -1,0 +1,42 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "cli": "nx",
+  "$id": "atomicdesign-atomic-module",
+  "title": "Atomic Module",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The Module Name to use",
+      "x-prompt": "What module name would you like to use? You may include an organization if desired (@orgname/projectname)",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      }
+    },
+    "authorName": {
+      "type": "string",
+      "description": "The Author Name to use",
+      "$default": {
+        "$source": "argv",
+        "index": 1
+      },
+      "x-prompt": "What author name would you like this to be attributed to (adds to the license, and project.json)"
+    },
+    "authorEmail": {
+      "type": "string",
+      "description": "The Author Email to use",
+      "$default": {
+        "$source": "argv",
+        "index": 2
+      },
+      "x-prompt": "What author email would you like this to be attributed to (adds to the project.json)"
+    },
+    "tags": {
+      "type": "string",
+      "description": "Add tags to the project (used for linting)",
+      "alias": "t"
+    }
+  },
+  "required": ["name", "authorName", "authorEmail"]
+}

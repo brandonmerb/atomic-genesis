@@ -12,6 +12,11 @@
       "schema": "./src/generators/atomic-library/schema.json",
       "description": "Generate an Atomic Singularity compatible library. This is a default TypeScript project with reasonable default configurations"
     },
+    "atomic-module": {
+      "factory": "./src/generators/atomic-module/generator",
+      "schema": "./src/generators/atomic-module/schema.json",
+      "description": "Generate an Atomic Singularity compatible module. This is a default TypeScript project with reasonable default configurations"
+    },
     "atomic-project": {
       "factory": "./src/generators/atomic-project/generator",
       "schema": "./src/generators/atomic-project/schema.json",
