@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
     // Currently we're only targeting support for the latest tools
-    "target": "ESNext",
-    "module": "ESNext",
-    "moduleResolution": "Bundler",
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "bundler",
 
     // We want to emit declaration files
     "declaration": true,
