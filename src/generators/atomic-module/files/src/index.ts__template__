@@ -1,5 +1,5 @@
-import { type AtomicModuleInterface, createModule } from '@atomicdesign/atomic-singularity'
+import { createModule } from '@atomicdesign/atomic-singularity'
 
-export const <%= projectName %>Module: AtomicModuleInterface = createModule({
+export const <%= projectName %>Module = createModule({
   name: "<%= projectName %>"
 })

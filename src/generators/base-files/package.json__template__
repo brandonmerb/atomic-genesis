@@ -12,11 +12,8 @@
     "@atomicdesign/atomic-singularity": "1.0.0"
   },
   "scripts": {
-    "clean": "rimraf ./dist",
-    "build": "npm run clean && npm run build:vite",
-    "build:swc": "swc ./src -d ./dist -C ./config/.swcrc",
-    "build:vite": "vite build -c ./config/vite.config.ts",
-    "test": "jest -c ./config/jest.config.ts"
+    "prebuild": "rimraf ./dist",
+    "build": "vite build -c ./config/vite.config.ts"
   },
   "devDependencies": {
     "@swc/cli": "^0.1.62",
@@ -44,6 +41,7 @@
   ],
   "exports": {
     ".": {
+      "atomicdesign:local": "./src/index.ts",
       "default": "./dist/index.js",
       "import": "./dist/index.js",
       "types": "./dist/index.d.ts"

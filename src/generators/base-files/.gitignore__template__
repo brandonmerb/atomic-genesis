@@ -6,3 +6,6 @@ node_modules/
 
 # Log files in general
 **.log
+
+# Anything marked .local. Mostly for environment files
+**.local

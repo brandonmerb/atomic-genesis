@@ -17,17 +17,20 @@ export default defineConfig((config: ConfigEnv): UserConfig => {
     dts({
       rollupTypes: true,
     }),
-    swc.vite()
+    swc.vite({
+      configFile: './config/.swcrc',
+    }),
   ]
 
   return {
     plugins: plugins,
     build: {
+      lib: {
+        fileName: "<%= projectName %>",
+        entry: "./src/index.ts",
+        name: "<%= projectName %>",
+      },
       rollupOptions: {
-        preserveEntrySignatures: 'strict',
-        input: {
-          "index": "./src/index.ts",
-        },
         output: {
           entryFileNames: '[name].js'
         },
