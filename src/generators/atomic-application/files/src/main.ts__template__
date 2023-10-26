@@ -1,3 +1,6 @@
 import { useAtomicApi } from '@atomicdesign/atomic-singularity';
+import { useAtomicSDK } from "@atomicdesign/atomic-sdk";
 
 useAtomicApi()
+  .use(useAtomicSDK())
+  .start()

@@ -25,7 +25,7 @@ function normalizeOptions(tree: Tree, options: AtomicProjectGeneratorSchema): No
   }
   let projectName = !!organizationName ? options.name.split('/')[1] : name;
   projectName = projectName.replace(new RegExp('/', 'g'), '-');
-  const projectRoot = !!organizationName ? `${getWorkspaceLayout(tree).appsDir}/${organizationName}/${projectName}` : `${getWorkspaceLayout(tree).libsDir}/${projectName}`;
+  const projectRoot = !!organizationName ? `${getWorkspaceLayout(tree).appsDir}/${organizationName}/${projectName}` : `${getWorkspaceLayout(tree).appsDir}/${projectName}`;
   const parsedTags = options.tags
     ? options.tags.split(',').map((s) => s.trim())
     : [];
@@ -54,7 +54,7 @@ function addFiles(tree: Tree, options: NormalizedSchema) {
     generateFiles(tree, path.join(__dirname, '../base-files'), options.projectRoot, templateOptions);
 
     // Generate our project specific files
-    //generateFiles(tree, path.join(__dirname, 'files'), options.projectRoot, templateOptions);
+    generateFiles(tree, path.join(__dirname, 'files'), options.projectRoot, templateOptions);
 }
 
 export default async function (tree: Tree, options: AtomicProjectGeneratorSchema) {
